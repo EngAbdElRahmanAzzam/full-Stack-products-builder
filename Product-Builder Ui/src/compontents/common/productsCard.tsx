@@ -1,4 +1,4 @@
-import { IProduct } from "../../../interfaces";
+import { IProduct } from "../../../interfaces/models";
 import { textSlicer } from "../../../utils";
 import Button from "../../common/button";
 

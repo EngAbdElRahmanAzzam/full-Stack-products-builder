@@ -1,4 +1,5 @@
-import { IProductErrorsMsg } from "../interfaces";
+import { IProductErrorsMsg } from "../interfaces/models";
+
 
 export function productValidation(product:{title:string, description:string, price:number|"", imgUrl:string}){
 

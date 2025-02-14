@@ -1,4 +1,4 @@
-import { IFormInput } from "../interfaces";
+import { IFormInput } from "../interfaces/models";
 
 export const productFrom: IFormInput[]= [
     {
