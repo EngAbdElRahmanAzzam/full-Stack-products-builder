@@ -19,14 +19,14 @@ const  ProductCard = ({product}:IProps) => {
             <img src={product.imgUrl}/>
 
             {/* title */}
-            <p className={`text-xl w-fit m-${cardStyles.margin}`}>{product.title}</p>
+            <p className={`text-xl w-fit m-${cardStyles.margin}`}>{product.name}</p>
 
             {/* price and categroy icon */}
             <div className={`flex justify-between items-center m-${cardStyles.margin} my-0`}>
                 <p className="text-lg">${product.price}</p>
                 <div className="flex justify-between items-center gap-1">
                     <img className="w-8 rounded-full"  src={product.category.imgUrl}/>
-                    <p>{product.category.title}</p>
+                    <p>{product.category.name}</p>
                 </div>
             </div>
 

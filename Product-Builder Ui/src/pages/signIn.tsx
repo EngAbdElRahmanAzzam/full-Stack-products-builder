@@ -1,3 +1,5 @@
+import Loader from "../compontents/common/loader"
+
 const SignInPage = () => {
     return (
       <div className="mx-auto flex min-h-screen w-full items-center justify-center bg-gray-900 text-white">
@@ -12,7 +14,7 @@ const SignInPage = () => {
                   <input type="password" placeholder="Password" className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"/>
               </div>
 
-              <button className="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-indigo-400">Continue</button>
+              <button className="rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-indigo-400"><Loader/></button>
           </section>
       </div>
     )
