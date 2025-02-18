@@ -1,6 +1,7 @@
-import { IProduct } from "../../../interfaces/models";
-import { textSlicer } from "../../../utils";
-import Button from "../../common/button";
+import { Button } from "@headlessui/react";
+import { IProduct } from "../../interfaces/models";
+import { textSlicer } from "../../utils";
+
 
 
 interface IProps{

@@ -45,12 +45,12 @@ const Header = () => {
 
             <div className="flex items-center gap-4">
                 <div className="sm:flex sm:gap-4">
-                <a
+                <Link
                     className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm"
-                    href="#"
+                    to="/sign-in"
                 >
                     Login
-                </a>
+                </Link>
                 </div>
 
                 <div className="block md:hidden">

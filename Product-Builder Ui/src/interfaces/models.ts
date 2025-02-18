@@ -1,14 +1,19 @@
-export interface ICategory{
-    title:string;
+export interface IBrand{
+    name:string;
     imgUrl:string;
 }
 
+export interface ICategory{
+    name:string;
+    imgUrl:string;
+}
 export interface IProduct{
-    title:string;
+    name:string;
     imgUrl:string;
     description:string;
     price:number|"";
     colors:string[];
+    brand:IBrand;
     category:ICategory;
 }
 
