@@ -1,11 +1,11 @@
 import { useState , ChangeEvent , Fragment , FocusEvent } from 'react'
-import { ICategory, IProduct, IProductErrorsMsg } from '../interfaces/models'
-import { productValidation } from '../validation'
-import { productFrom } from '../utils/data'
+import { ICategory, IProduct, IProductErrorsMsg } from '../../interfaces/models'
+import { productValidation } from '../../validation'
+import { productFrom } from '../../utils/data'
 import { Button } from '@headlessui/react'
-import InputWrapper from '../compontents/common/input'
-import ProductCard from '../compontents/common/productsCard'
-import Model from '../compontents/common/model'
+import InputWrapper from '../../compontents/common/input'
+import ProductCard from '../../compontents/common/productsCard'
+import Model from '../../compontents/common/model'
 
 
 let cat:ICategory ={

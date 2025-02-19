@@ -1,12 +1,12 @@
 import { Navigate, Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
-import ErrorPage from "../pages/errorHandling";
-import SignInPage from "../pages/signIn";
+import ErrorPage from "../pages/errorHandling/errorHandling";
+import SignInPage from "../pages/auth/signIn";
 import MainLayout from "../layouts/mainLayout";
-import HomePage from "../pages/home";
-import ProductsPage from "../pages/products";
-import BrandsPage from "../pages/brands";
-import UsersPage from "../pages/users";
-import CategoriesPage from "../pages/categories";
+import HomePage from "../pages/main/home";
+import ProductsPage from "../pages/main/products";
+import BrandsPage from "../pages/main/brands";
+import UsersPage from "../pages/main/users";
+import CategoriesPage from "../pages/main/categories";
 
 const errorElement = <ErrorPage />;
 
