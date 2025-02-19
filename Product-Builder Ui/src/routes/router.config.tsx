@@ -7,6 +7,7 @@ import ProductsPage from "../pages/main/products";
 import BrandsPage from "../pages/main/brands";
 import UsersPage from "../pages/main/users";
 import CategoriesPage from "../pages/main/categories";
+import NotFoundPage from "../pages/errorHandling/notFoundPage";
 
 const errorElement = <ErrorPage />;
 
@@ -26,7 +27,7 @@ export const router = createBrowserRouter(
 
             <Route path="sign-in" element=<SignInPage/> errorElement={errorElement}/>
 
-            <Route path="*" element=<ErrorPage/> />
+            <Route path="*" element=<NotFoundPage/> />
         </>
     )
 )
