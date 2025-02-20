@@ -20,7 +20,7 @@ export const router = createBrowserRouter(
             <Route path="/" element=<MainLayout/> errorElement={errorElement}>
                 <Route index element=<HomePage/>  />
                 <Route path="products" element =<ProductsPage/> />
-                <Route path="categories" element=<CategoriesPage/> />
+                <Route path="catergories" element=<CategoriesPage/> />
                 <Route path="brands" element=<BrandsPage/> />
                 <Route path="users" element=<UsersPage/> />
             </Route>
