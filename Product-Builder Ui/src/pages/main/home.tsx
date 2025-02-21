@@ -6,31 +6,19 @@ import { Button } from '@headlessui/react'
 import InputWrapper from '../../compontents/common/input'
 import ProductCard from '../../compontents/common/productsCard'
 import Model from '../../compontents/common/model'
+import { products } from '../../data/static'
 
-
-let cat:ICategory ={
-  title:"Phones",
-  imgUrl:"img.jpeg"
-}
-let product_:IProduct={
-  title:"Iphone 12",
-  imgUrl:"img.jpeg",
-  description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quisquam dolore asperiores et mollitia. Minima sapiente reprehenderit corrupti doloremque eveniet.",
-  price: 1000,
-  colors:["red", "blue ", "green"],
-  category:cat
-}
 
 function HomePage() {
     let isSubmited:boolean = false
     const productObjInit:IProduct =   
     {
-        title:"",
+        name:"",
         imgUrl:"",
         description:"",
         price:"",
         colors:[],
-        category:{title:"", imgUrl:""}
+        category:{name:"", imgUrl:""}
     }
 
 /* _________states__________ */
@@ -49,7 +37,7 @@ function HomePage() {
     const openModel = () =>  setIsOpen(true)
     const closeModel = () => setIsOpen(false)
 
-    const setErrorByValidation =() =>  setErrorMsg(productValidation({title:product.title, description:product.description, imgUrl:product.imgUrl , price:product.price}))
+    const setErrorByValidation =() =>  setErrorMsg(productValidation({title:product.name, description:product.description, imgUrl:product.imgUrl , price:product.price}))
 
 
     const onChangeInputHandler = (e:ChangeEvent<HTMLInputElement>)=>{
@@ -65,8 +53,7 @@ function HomePage() {
 
     const onAddProductHandler = ()=>{
       isSubmited = true
-      setErrorByValidation()
-      product_.title = "rerender"    
+      setErrorByValidation()   
     }
 /* _________Render__________ */
     const productForm = productFrom.map(({id, label ,type} , index)=>(
@@ -84,13 +71,20 @@ function HomePage() {
 
         </Fragment>
       ))
+    const productList = products.map((curr , index)=>(
+      <Fragment key={index}>
+
+        <ProductCard product={curr} />
+
+      </Fragment>
+    ))
 
     return (
       <>
         <button onClick={openModel}> model</button>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-2">
-          this is card
-            <ProductCard product={product_} />
+          {productList}
+            
         </div>
 
         <Model isOpen={isOpen}  openModel={openModel} closeModel={closeModel} title="Add New Product">
@@ -104,7 +98,6 @@ function HomePage() {
           </form>
 
         </Model>
-        <input className='w-7 cursor-pointer bg-white rounded-full outline-none border-none' type='color' onChange={(e)=>{console.log(e.target.value)}} />
       </>
     )
     }
