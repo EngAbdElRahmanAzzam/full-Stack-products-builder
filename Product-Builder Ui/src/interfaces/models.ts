@@ -1,13 +1,16 @@
 export interface IBrand{
+    id?:string;
     name:string;
     imgUrl:string;
 }
 
 export interface ICategory{
+    id?:string;
     name:string;
     imgUrl:string;
 }
 export interface IProduct{
+    id?:string;
     name:string;
     imgUrl:string;
     description:string;

@@ -1,19 +1,23 @@
 import { IBrand, ICategory, IProduct } from "../interfaces/models"
 
-let cat:ICategory[] =[
-  {
+export let cat:ICategory[] =[
+{
+    id:"1",
     name:"Phones",
     imgUrl:"img.jpeg"
 },
 {
+  id:"2",
   name:"Phones",
   imgUrl:"img.jpeg"
 },
 {
+  id:"3",
   name:"Phones",
   imgUrl:"img.jpeg"
 },
 {
+  id:"4",
   name:"Phones",
   imgUrl:"img.jpeg"
 }
@@ -34,7 +38,7 @@ export const products:IProduct[] = [
         price: 1000,
         colors:["#bd6b6b", "#ad5858 ", "#7a7a7a"],
         brand:brands[0],
-        category:cat
+        category:cat[0]
       },
       {
         name:"Iphone 12",
@@ -43,7 +47,7 @@ export const products:IProduct[] = [
         price: 1000,
         colors:["#bd6b6b", "#ad5858 ", "#7a7a7a"],
         brand:brands[0],
-        category:cat
+        category:cat[0]
       }
       ,
       {
@@ -53,7 +57,7 @@ export const products:IProduct[] = [
         price: 1000,
         colors:["#bd6b6b", "#ad5858 ", "#7a7a7a"],
         brand:brands[0],
-        category:cat
+        category:cat[0]
       }
       ,
       {
@@ -63,7 +67,7 @@ export const products:IProduct[] = [
         price: 1000,
         colors:["#bd6b6b", "#ad5858 ", "#7a7a7a"],
         brand:brands[0],
-        category:cat
+        category:cat[0]
       }
       ,
       {
@@ -73,6 +77,6 @@ export const products:IProduct[] = [
         price: 1000,
         colors:["#bd6b6b", "#ad5858 ", "#7a7a7a"],
         brand:brands[0],
-        category:cat
+        category:cat[0]
       }
 ]

@@ -3,6 +3,7 @@ import { IProduct } from "../../interfaces/models";
 import { textSlicer } from "../../utils";
 import ColorCircle from "./colorItem";
 import {useState} from 'react';
+import MenuList from "./menuList";
 
 
 interface IProps{
@@ -39,6 +40,7 @@ const  ProductCard = ({product}:IProps) => {
             <p className={`text-zinc-500 text-sm m-${cardStyles.margin}`}>
                 {textSlicer(product.description)}
             </p>
+
             <div>
                 <ColorCircle color="red"/>
             </div>

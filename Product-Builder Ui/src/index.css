@@ -24,6 +24,10 @@
   box-sizing: border-box;
 }
 
+ul{
+  list-style: none;
+}
+
 ::selection{
   background-color: black;
   color:orange
@@ -46,7 +50,9 @@
   background-color: var(--hover-color);
 }
 
-
+button, a{
+  transition: all .2s linear;
+}
 button:active, a:active{
   scale: .9;
 }

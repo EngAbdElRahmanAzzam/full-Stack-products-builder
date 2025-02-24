@@ -6,7 +6,8 @@ import { Button } from '@headlessui/react'
 import InputWrapper from '../../compontents/common/input'
 import ProductCard from '../../compontents/common/productsCard'
 import Model from '../../compontents/common/model'
-import { products } from '../../data/static'
+import { cat, products } from '../../data/static'
+import MenuList from '../../compontents/common/menuList'
 
 
 function HomePage() {
@@ -92,9 +93,9 @@ function HomePage() {
           <form onSubmit={(e)=>e.preventDefault()}>
 
               {productForm}
+              <MenuList categories={cat}/>
               <Button  className={`bg-sky-500 w-full mb-2 py-1 px-2 rounded-lg transition hover:bg-sky-300 hover:text-black`} type='submit' onClick={onAddProductHandler}>Add</Button>
               <Button className={`bg-gray-500 w-full py-1 px-2 rounded-lg transition hover:bg-gray-300 hover:text-black`} type='reset' onClick={onCancelFormHandler}>Delete</Button>
-
           </form>
 
         </Model>
